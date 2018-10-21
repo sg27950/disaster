@@ -1,0 +1,16 @@
+h1{
+    color: black;
+}
+
+img{
+    border: 5px solid;
+    border-radius: 8px;
+    width: 250px;
+    height: auto;
+    max-width: 100%;
+}
+
+body{
+    background-color: #82a7ff;
+    
+}
