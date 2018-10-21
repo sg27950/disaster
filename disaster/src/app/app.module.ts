@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ChecklistComponent } from './checklist/checklist.component';
 import { DescriptionComponent } from './description/description.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { BagComponent } from './bag/bag.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './/app-routing.module';
     WelcomeComponent,
     HomeComponent,
     ChecklistComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    BagComponent
   ],
   imports: [
     BrowserModule,
