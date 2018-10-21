@@ -1,3 +1,65 @@
-<p>
-  welcome works!
-</p>
+
+  
+    <div class="bg">
+        <div class="row">
+            <div class="col-md-6 offset-md-3"><img class="rounded mx-auto d-block" id="logo" src="../../assets/logo-03.png" alt="logo"></div>
+            </div>
+            <div class="container" style="padding: 50px">
+                <div class="row">
+                    <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
+                        <button type="button" class="rounded mx-auto d-block" class="btn btn-outline-danger center-block" style="align-content: center">GET START</button>
+                    </div>
+                    <div class="col-sm">
+                    </div>
+                </div>
+            </div>
+                
+            
+            <div class="row" style="align-content: flex-start">
+                <p style="text-align: center"> 
+                    Be prepared
+                    <span style="text-align: center">
+                      DISASTER WARNING
+                    </span>
+                    &mdash; Before, During and After &mdash;
+                  </p>
+                  </div>
+            
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  
+  <script>
+      $('.ml13').each(function(){
+$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+});
+
+anime.timeline({loop: true})
+.add({
+  targets: '.ml13 .letter',
+  translateY: [100,0],
+  translateZ: 0,
+  opacity: [0,1],
+  easing: "easeOutExpo",
+  duration: 14400,
+  delay: function(el, i) {
+    return 300 + 30 * i;
+  }
+}).add({
+  targets: '.ml13 .letter',
+  translateY: [0,-100],
+  opacity: [1,0],
+  easing: "easeInExpo",
+  duration: 1200,
+  delay: function(el, i) {
+    return 100 + 30 * i;
+  }
+});
+  
+  </script>
+
+
