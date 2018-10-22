@@ -9,6 +9,11 @@ import { DescriptionComponent } from './description/description.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { BagComponent } from './bag/bag.component';
 
+// <--Import these modules-->
+import { HttpService } from './http.service';
+import { HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,9 +25,13 @@ import { BagComponent } from './bag/bag.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // <--Add these-->
+    FormsModule,
+    HttpClientModule
+    // <--Add these-->
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

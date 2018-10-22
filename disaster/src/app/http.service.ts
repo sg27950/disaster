@@ -1,9 +1,20 @@
 import { Injectable } from '@angular/core';
+// <--Add this service here-->
+import { HttpClient } from '@angular/common/http';
+// <--Add end-->
 
 @Injectable({
   providedIn: 'root'
 })
 export class HttpService {
 
-  constructor() { }
+  constructor(private _http: HttpClient) { }
+  createBag(newBag: any) {
+    console.log('Adding a Bag!', newBag);
+    return this._http.post('api/createBag', newBag);
+  }
+  readBag(readBag: any) {
+    console.log('Reading a Bag!', readBag);
+    return this._http.post('api/readBag', readBag);
+  }
 }
