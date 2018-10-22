@@ -13,6 +13,11 @@ import { BagComponent } from './bag/bag.component';
 import { HttpService } from './http.service';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { TornadoComponent } from './tornado/tornado.component';
+import { FireComponent } from './fire/fire.component';
+import { FloodComponent } from './flood/flood.component';
+import { EarthquakeComponent } from './earthquake/earthquake.component';
+import { NuclearComponent } from './nuclear/nuclear.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     ChecklistComponent,
     DescriptionComponent,
-    BagComponent
+    BagComponent,
+    TornadoComponent,
+    FireComponent,
+    FloodComponent,
+    EarthquakeComponent,
+    NuclearComponent
   ],
   imports: [
     BrowserModule,
