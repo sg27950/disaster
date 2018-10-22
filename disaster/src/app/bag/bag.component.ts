@@ -23,7 +23,7 @@ export class BagComponent implements OnInit {
       console.log('API RESPONSE BABY!', data);
       console.log(data);
       this.newBag = {item: '', weight: ''};
-      this._router.navigate(['/bag']); // <--send them back to the main page-->
+      this._router.navigate(['/disaster/bag']); // <--send them back to the main page-->
 
     });
   }

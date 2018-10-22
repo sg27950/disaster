@@ -20,5 +20,5 @@ require('./server/config/routes.js')(app);
 
 
 app.listen(8000, function(){
-    console.log('on port 8000');
+    console.log('Flying high on port 8000');
 });

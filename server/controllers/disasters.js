@@ -11,6 +11,7 @@ module.exports = {
             console.log('onlyusers length is ' + onlyuser.length);
             if (onlyuser.length == 0) {
                 var x = {};
+                console.log(x);
                 x.userNum = 1;
                 x.myBag = req.body;
                 var predefinedBag = new Disaster(x);
