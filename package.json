@@ -1,0 +1,28 @@
+{
+  "name": "disaster",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.3.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sg27950/disaster.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sg27950/disaster/issues"
+  },
+  "homepage": "https://github.com/sg27950/disaster#readme"
+}

@@ -5624,6 +5624,11 @@ reflect-metadata@^0.1.2:
   resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.12.tgz#311bf0c6b63cd782f228a81abe146a2bfa9c56f2"
   integrity sha512-n+IyV+nGz3+0q3/Yf1ra12KpCyi001bi4XFxSjbiWWjfqb52iTTtpGXmCCAOWWIAn9KEuFZKGqBERHmrtScZ3A==
 
+reframe.js@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/reframe.js/-/reframe.js-2.2.4.tgz#6baebfa35e780d15f6fa0a300abe3f993a726a2c"
+  integrity sha512-hewOLpdQNCPTmEkxfOfSjAhhRs/IU2OKunK2CNkGbAUZjP8K2vxsp5667jvyOp7t6g/4kKRbnD1ffJINszvN1w==
+
 regenerate@^1.2.1:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
