@@ -53,3 +53,6 @@ ul, li{
     bottom: 30px;
     background-color:hsla(120, 100%, 75%, 0.3);
 }
+.max-width-1024{
+    max-width: 1024px; margin: 0 auto;
+}
