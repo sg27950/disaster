@@ -12,9 +12,11 @@ import { Router } from '@angular/router';
 })
 export class BagComponent implements OnInit {
   newBag: any; // <--You will need these here newPlay is coming from the HTML-->
+  receivedBag = {};
   constructor(private _httpService: HttpService, private _router: Router) { }
 
   ngOnInit() {
+    this.readBag();
     this.newBag = {item: '', weight: ''};
     // <--This is where the form data is picked up. MAKE SURE THEY MATCH YOUR MODELS!!!!-->
   }
@@ -27,15 +29,18 @@ export class BagComponent implements OnInit {
     });
   }
 
-  // readBag() {
-  //   var tempObservable = this._httpService.SerReadBag();
-  //   tempObservable.subscribe((data:any)=>{
-  //     // this.wholeBag = data;
-  //     console.log('we read the backend bag:', data)
-  //     // if(!data.errors){
-  //     //   this._router.navigate(['/disaster/checklist']);
-  //     // }
-  //   })
-  // }
+  readBag() {
+    var tempObservable = this._httpService.SerReadBag();
+    tempObservable.subscribe((data:any)=>{
+      this.receivedBag = data;
+      console.log('we read the backend bag:', data);
+      console.log('stored in receivedBag:', this.receivedBag);
+      // if(!data.errors){
+      //   this._router.navigate(['/disaster/checklist']);
+      // }
+    })
+  }
+  // readBag(){
 
+  // }
 }

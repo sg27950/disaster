@@ -14,9 +14,9 @@ export class HttpService {
     console.log('Adding a Bag!', newBag);
     return this._http.post('/api/createBag', newBag);
   }
-  SerReadBag(readBag: any) {
-    console.log('Reading a Bag!', readBag);
-    return this._http.post('/api/readBag', readBag);
+  SerReadBag() {
+    console.log('Reading a Bag!');
+    return this._http.post('/api/readBag', null);
   }
   SerSendWholeBag(wholeBag) {
     console.log('sending this bag to backend: ', wholeBag);

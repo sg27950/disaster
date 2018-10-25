@@ -11,10 +11,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./checklist.component.css']
 })
 export class ChecklistComponent implements OnInit {
+TFaddBag = false;
+allAdds = [];
 returnbag:any;
 myarray = [];
 myjson = {};
-newBag:any;
+newBag={item: '', weight: ''};
 testbag= {"myBag":[]};
 indexes=[];
 funcWholeBag = {"myBag":[]};
@@ -131,26 +133,28 @@ kekBag =
   constructor(private _httpService: HttpService, private _router: Router) { }
 
   ngOnInit() {
-    this.newBag = {item: '', weight: ''};
+    // this.newBag = {item: '', weight: ''};
     // <--This is where the form data is picked up. MAKE SURE THEY MATCH YOUR MODELS!!!!-->
   }
   addBag() {
-    this._httpService.createBag(this.newBag).subscribe(data => {
-      console.log('API RESPONSE BABY!', data);
-      console.log(data);
-      this.newBag = {item: '', weight: ''};
-      this._router.navigate(['/disaster/bag']); // <--send them back to the main page-->
+    this.allAdds.push(this.newBag);
+    console.log('allAdds:',this.allAdds);
+    this.sending();
+    // this._httpService.createBag(this.newBag).subscribe(data => {
+    //   console.log('API RESPONSE BABY!', data);
+    //   console.log(data);
+    //   this.newBag = {item: '', weight: ''};
+    //   this._router.navigate(['/disaster/bag']); // <--send them back to the main page-->
 
-    });
+    // });
   }
-  sendWholeBag() {
-    console.log('this is the nulltruefalse bag',this.indexes);
-    for (var i=0; i<this.indexes.length; i++){
-      if (this.indexes[i]==true){
-        this.myarray.push(this.kekBag.myBag[i]);
-        console.log(this.kekBag.myBag[i]);
-      }
+
+  sending() {
+    for (var i = 0; i<this.allAdds.length;i++){
+      this.myarray.push(this.allAdds[i]);
     }
+    console.log('after concat', this.myarray);
+    console.log('joint array', this.myarray);
     this.myjson = {"myBag": this.myarray};
     console.log('myjson:', this.myjson);
     var tempObservable = this._httpService.SerSendWholeBag(this.myjson);
@@ -163,10 +167,22 @@ kekBag =
       // }
     })
   }
-  testfunction(){
-    console.log('testbag:', this.testbag);
+  sendWholeBag() {
+    this.myarray = [];
+    console.log('this is the nulltruefalse bag',this.indexes);
+    for (var i=0; i<this.indexes.length; i++){
+      if (this.indexes[i]==true){
+        this.myarray.push(this.kekBag.myBag[i]);
+        console.log(this.kekBag.myBag[i]);
+      }
+    }
+    this.sending();
   }
+  // testfunction(){
+  //   console.log('testbag:', this.testbag);
+  // }
   // trackByIdx(index: number, obj: any): any {
   //   return index;
   // }
+
 }
