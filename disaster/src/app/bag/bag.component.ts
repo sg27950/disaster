@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 // <--Add these modules here-->
 import { HttpService } from './../http.service';
@@ -11,8 +11,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./bag.component.css']
 })
 export class BagComponent implements OnInit {
+  @Input() receivedBag: {};
   newBag: any; // <--You will need these here newPlay is coming from the HTML-->
-  receivedBag = {};
+  // receivedBag = {};
   constructor(private _httpService: HttpService, private _router: Router) { }
 
   ngOnInit() {
