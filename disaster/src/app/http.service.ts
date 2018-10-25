@@ -14,11 +14,16 @@ export class HttpService {
     console.log('Adding a Bag!', newBag);
     return this._http.post('/api/createBag', newBag);
   }
-  readBag(readBag: any) {
+  SerReadBag(readBag: any) {
     console.log('Reading a Bag!', readBag);
     return this._http.post('/api/readBag', readBag);
   }
+  SerSendWholeBag(wholeBag) {
+    console.log('sending this bag to backend: ', wholeBag);
+    return this._http.post('/api/createBag', wholeBag);
+  }
 }
+
 // These are the routes to hit
 // app.post('/api/readBag', disasters.readBag);
 // app.post('/api/createBag', disasters.createBag);These are the routes to hit

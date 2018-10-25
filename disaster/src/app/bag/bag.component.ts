@@ -24,7 +24,18 @@ export class BagComponent implements OnInit {
       console.log(data);
       this.newBag = {item: '', weight: ''};
       this._router.navigate(['/disaster/bag']); // <--send them back to the main page-->
-
     });
   }
+
+  readBag() {
+    var tempObservable = this._httpService.SerReadBag();
+    tempObservable.subscribe((data:any)=>{
+      // this.wholeBag = data;
+      console.log('we read the backend bag:', data)
+      // if(!data.errors){
+      //   this._router.navigate(['/disaster/checklist']);
+      // }
+    })
+  }
+
 }
