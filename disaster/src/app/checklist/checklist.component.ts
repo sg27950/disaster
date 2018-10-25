@@ -11,8 +11,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./checklist.component.css']
 })
 export class ChecklistComponent implements OnInit {
-newBag:any;
 returnbag:any;
+myarray = [];
+myjson = {};
+newBag:any;
+testbag= {"myBag":[]};
+indexes=[];
+funcWholeBag = {"myBag":[]};
 wholeBag = {
   "myBag": [
     {
@@ -139,7 +144,16 @@ kekBag =
     });
   }
   sendWholeBag() {
-    var tempObservable = this._httpService.SerSendWholeBag(this.wholeBag);
+    console.log('this is the nulltruefalse bag',this.indexes);
+    for (var i=0; i<this.indexes.length; i++){
+      if (this.indexes[i]==true){
+        this.myarray.push(this.kekBag.myBag[i]);
+        console.log(this.kekBag.myBag[i]);
+      }
+    }
+    this.myjson = {"myBag": this.myarray};
+    console.log('myjson:', this.myjson);
+    var tempObservable = this._httpService.SerSendWholeBag(this.myjson);
     tempObservable.subscribe((data:any)=>{
       // this.wholeBag = data;
       console.log('we got this from backend:', data);
@@ -149,4 +163,10 @@ kekBag =
       // }
     })
   }
+  testfunction(){
+    console.log('testbag:', this.testbag);
+  }
+  // trackByIdx(index: number, obj: any): any {
+  //   return index;
+  // }
 }

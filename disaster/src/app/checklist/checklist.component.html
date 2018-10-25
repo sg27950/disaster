@@ -15,12 +15,15 @@
       <h2>Disaster Checklist</h2>
       <h3>Disaster</h3>
       <form class="form-horizontal" (submit)="sendWholeBag()">
+      <!-- <form class="form-horizontal" (submit)="testfunction()"> -->
         <!-- forloop starts -->
-        <div *ngFor="let kek of kekBag.myBag">
+        <!-- <div *ngFor="let kek of kekBag.myBag; let i = index;trackBy:trackByIdx"> -->
+        <div *ngFor="let kek of kekBag.myBag; let i = index;">
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
               <div class="checkbox">
-                <label><input type="checkbox" name="remember"> {{kek.item}} ({{kek.weight}} lbs)</label>
+                <!-- <label><input type="checkbox" value="kekBag.myBag[i]" [(ngModel)]="testbag.myBag[i]" [ngModelOptions]="{standalone: true}"> {{kek.item}} ({{kek.weight}} lbs)</label> -->
+                <label><input type="checkbox" value="1" [(ngModel)]="indexes[i]" [ngModelOptions]="{standalone: true}"> {{kek.item}} ({{kek.weight}} lbs)</label>
               </div>
             </div>
           </div>
@@ -47,6 +50,8 @@
             </div>
           </div>
         </div> -->
+        <!-- {{ testbag | json }} -->
+        {{ indexes | json }}
         <div class="form-group">        
           <div class="col-sm-offset-2 col-sm-10 ">
             <button type="submit" class="btn btn-primary">Update Bag</button>

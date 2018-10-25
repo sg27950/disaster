@@ -27,15 +27,15 @@ export class BagComponent implements OnInit {
     });
   }
 
-  readBag() {
-    var tempObservable = this._httpService.SerReadBag();
-    tempObservable.subscribe((data:any)=>{
-      // this.wholeBag = data;
-      console.log('we read the backend bag:', data)
-      // if(!data.errors){
-      //   this._router.navigate(['/disaster/checklist']);
-      // }
-    })
-  }
+  // readBag() {
+  //   var tempObservable = this._httpService.SerReadBag();
+  //   tempObservable.subscribe((data:any)=>{
+  //     // this.wholeBag = data;
+  //     console.log('we read the backend bag:', data)
+  //     // if(!data.errors){
+  //     //   this._router.navigate(['/disaster/checklist']);
+  //     // }
+  //   })
+  // }
 
 }
