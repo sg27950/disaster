@@ -25,27 +25,7 @@ module.exports = {
                         res.json(predefinedBag);
                     }
                 });
-
             }else{
-                // var y = {
-                //     "myBag": [
-                //         {
-                //             "item": "cellphone",
-                //             "weight": 2
-                //         }
-                //     ]
-                // }
-                // var newbag = new MyBag({"item":"cellphone","weight":2});
-                // // console.log('req.body: '+ req.body[0]);
-                // newbag.save(function(err){
-                //     if(err){
-                //         console.log('got errors')
-                //         res.json(err);
-                //     }else{
-                //         console.log('newbag made: '+ newbag);
-                //         res.json(newbag);
-                //     }
-                // })
                 arrayofbags = [];
                 console.log('length of myBag ' +req.body.myBag.length);
                 for(var i=0; i<req.body.myBag.length; i++){
@@ -61,15 +41,14 @@ module.exports = {
                     });
                 }
                 console.log('this is the arrayofbags: '+ arrayofbags);
-
+                
+                //the following code will wait until the arrayofbags is filled, before running the code
                 continueExec();
                 function continueExec() {
-                    //here is the trick, wait until var callbackCount is set number of callback functions
                     if (arrayofbags.length < req.body.myBag.length) {
                         setTimeout(continueExec, 100);
                         return;
                     }
-                    //Finally, do what you need
                     Disaster.findOne({userNum: 1}, function(err, disaster){
                         disaster.myBag = arrayofbags;
                         disaster.save(function(err){
@@ -82,23 +61,7 @@ module.exports = {
                         });
                     });
                     
-                }
-
-     
-
-
-                    // Disaster.findOneAndUpdate({userNum: 1}, {$push: {myBag: theupdatedbag}}, function(err,data){
-                    //     console.log('findoneandupdate: '+ data);
-                    //     if(err){
-                    //         res.json(err);
-                    //         console.log('made it to the end');
-                    //     }
-                    //     // else{
-                    //     //     res.json({key: 'itworks'});  
-                    //     // }
-                    // })
-                        
-                    
+                }    
             }
         });
     },
@@ -135,5 +98,4 @@ module.exports = {
     printme: function(req,res){
         console.log(req.body);
     }
-
 };
