@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     border: 0px;     
-    border: 1px solid pink;   
+    /* border: 1px solid pink;    */
 }
 .container {
     margin-left: 200px;
@@ -9,3 +9,5 @@
     display: inline-block;
     vertical-align: top;
 }
+
+
