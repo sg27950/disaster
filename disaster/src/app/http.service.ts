@@ -22,12 +22,12 @@ export class HttpService {
     console.log('sending this bag to backend: ', wholeBag);
     return this._http.post('/api/createBag', wholeBag);
   }
-  SerDelete(id){
-    return this._http.delete('api/delete/'+id);
-  }  
+  SerDelete(id) {
+    return this._http.delete('api/delete/' + id);
+  }
 
 }
 
 // These are the routes to hit
 // app.post('/api/readBag', disasters.readBag);
-// app.post('/api/createBag', disasters.createBag);These are the routes to hit
+// app.post('/api/createBag', disasters.createBag);
