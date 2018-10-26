@@ -18,122 +18,122 @@ export class ChecklistComponent implements OnInit {
   onlyAdd = [];
   TFaddBag = false;
   plainAdds = [];
-  plainAdds2=[];
-  returnbag:any;
+  plainAdds2 = [];
+  returnbag: any;
   myarray = [];
   myjson = {};
-  newBag={item: '', weight:Number};
-  testbag= {"myBag":[]};
-  indexes=[];
+  newBag = {item: '', weight: Number};
+  testbag = {'myBag': []};
+  indexes = [];
   indexes2 = [];
-  funcWholeBag = {"myBag":[]};
+  funcWholeBag = {'myBag': []};
   wholeBag = {
-    "myBag": [
+    'myBag': [
       {
-        "item": "Cellphone and charger",
-        "weight": 1
+        'item': 'Cellphone and charger',
+        'weight': 1
       },
       {
-        "item": "Computer",
-        "weight": 5000
+        'item': 'Computer',
+        'weight': 5000
       },
       {
-        "item": "Driver's License",
-        "weight": 4000
+        'item': 'Driver\'s License',
+        'weight': 4000
       }
     ]
-  }
+  };
 
-  kekBag = 
+  kekBag =
   {
-    "myBag": [
+    'myBag': [
       {
-        "item": "Cellphone and charger",
-        "weight": 1
+        'item': 'Cellphone and charger',
+        'weight': 1
       },
       {
-        "item": "Computer",
-        "weight": 5000
+        'item': 'Computer',
+        'weight': 5000
       },
       {
-        "item": "Driver's License",
-        "weight": 4000
+        'item': 'Driver\'s License',
+        'weight': 4000
       },
       {
-        "item": "Deed to your house",
-        "weight": 4000
+        'item': 'Deed to your house',
+        'weight': 4000
       },
       {
-        "item": "Proof of Insurance",
-        "weight": 4000
+        'item': 'Proof of Insurance',
+        'weight': 4000
       },
       {
-        "item": "Medical Records",
-        "weight": 4000
+        'item': 'Medical Records',
+        'weight': 4000
       },
       {
-        "item": "Passports",
-        "weight": 1
+        'item': 'Passports',
+        'weight': 1
       },
       {
-        "item": "Social Security Cards",
-        "weight": 5000
+        'item': 'Social Security Cards',
+        'weight': 5000
       },
       {
-        "item": "A list of personal contacts",
-        "weight": 4000
+        'item': 'A list of personal contacts',
+        'weight': 4000
       },
       {
-        "item": "Pet",
-        "weight": 4000
+        'item': 'Pet',
+        'weight': 4000
       },
       {
-        "item": "Cash",
-        "weight": 4000
+        'item': 'Cash',
+        'weight': 4000
       },
       {
-        "item": "Keys",
-        "weight": 4000
+        'item': 'Keys',
+        'weight': 4000
       },
       {
-        "item": "Original Paintings",
-        "weight": 4000
+        'item': 'Original Paintings',
+        'weight': 4000
       },
       {
-        "item": "Non-perishable, ready-to-eat food",
-        "weight": 4000
+        'item': 'Non-perishable, ready-to-eat food',
+        'weight': 4000
       },
       {
-        "item": "Sanitary Devices",
-        "weight": 4000
+        'item': 'Sanitary Devices',
+        'weight': 4000
       },
       {
-        "item": "Water",
-        "weight": 4000
+        'item': 'Water',
+        'weight': 4000
       },
       {
-        "item": "Change of clothing",
-        "weight": 4000
+        'item': 'Change of clothing',
+        'weight': 4000
       },
       {
-        "item": "Coats/Jackets",
-        "weight": 4000
+        'item': 'Coats/Jackets',
+        'weight': 4000
       },
       {
-        "item": "Toiletries",
-        "weight": 4000
+        'item': 'Toiletries',
+        'weight': 4000
       },
       {
-        "item": "Flashlight",
-        "weight": 4000
+        'item': 'Flashlight',
+        'weight': 4000
       },
       {
-        "item": "Shoes/Boots",
-        "weight": 4000
+        'item': 'Shoes/Boots',
+        'weight': 4000
       },
       {
-        "item": "Sleeping Bag",
-        "weight": 4000
+        'item': 'Sleeping Bag',
+        'weight': 4000
       },
     ]
   };
@@ -144,7 +144,7 @@ export class ChecklistComponent implements OnInit {
       // <--This is where the form data is picked up. MAKE SURE THEY MATCH YOUR MODELS!!!!-->
     }
     addBag() {
-      this.temp = Object.assign({},this.newBag);
+      this.temp = Object.assign({}, this.newBag);
       this.plainAdds2.push(this.temp);
       // console.log('newBag before', this.newBag);
 
@@ -154,10 +154,6 @@ export class ChecklistComponent implements OnInit {
       // this.plainAdds2 = Object.assign(this.newBag);
       // console.log('plainAdds2 before', this.plainAdds2);
       // this.plainAdds.push(this.newBag);
-      
-
-
-
       // this.plainAdds2 = this.plainAdds;
       // console.log('plainAdds:',this.plainAdds);
       // this.sending();
@@ -174,15 +170,14 @@ export class ChecklistComponent implements OnInit {
 
     sendCustom() {
       this.plainCheck2 = [];
-      console.log('sendCustom() this is the nulltruefalse bag',this.indexes2);
-      for (var i=0; i<this.indexes2.length; i++){
-        if (this.indexes2[i]==1){
+      console.log('sendCustom() this is the nulltruefalse bag', this.indexes2);
+      for (let i = 0; i < this.indexes2.length; i ++) {
+        if (this.indexes2[i] === 1) {
           this.plainCheck2.push(this.plainAdds2[i]);
           console.log(this.plainAdds2[i]);
         }
       }
       this.sending();
-    
     }
 
     sending() {
@@ -195,23 +190,23 @@ export class ChecklistComponent implements OnInit {
       // }
       // console.log('after concat', this.myarray);
       // console.log('joint array', this.myarray);
-      this.myjson = {"myBag": this.myConcat};
+      this.myjson = {'myBag': this.myConcat};
       console.log('myjson:', this.myjson);
-      var tempObservable = this._httpService.SerSendWholeBag(this.myjson);
-      tempObservable.subscribe((data:any)=>{
+      const tempObservable = this._httpService.SerSendWholeBag(this.myjson);
+      tempObservable.subscribe((data: any) => {
         // this.wholeBag = data;
         console.log('we got this from backend:', data);
         this.returnbag = data;
         // if(!data.errors){
         //   this._router.navigate(['/disaster/checklist']);
         // }
-      })
+      });
     }
     sendWholeBag() {
       this.plainCheck = [];
-      console.log('this is the nulltruefalse bag',this.indexes);
-      for (var i=0; i<this.indexes.length; i++){
-        if (this.indexes[i]==1){
+      console.log('this is the nulltruefalse bag', this.indexes);
+      for (let i = 0; i < this.indexes.length; i++) {
+        if (this.indexes[i] === 1) {
           this.plainCheck.push(this.kekBag.myBag[i]);
           console.log(this.kekBag.myBag[i]);
         }
