@@ -144,7 +144,7 @@ export class ChecklistComponent implements OnInit {
       // <--This is where the form data is picked up. MAKE SURE THEY MATCH YOUR MODELS!!!!-->
     }
     addBag() {
-<<<<<<< HEAD
+
       // this.temp = Object.assign({},this.newBag);
       // this.plainAdds2.push(this.temp);
 
@@ -153,10 +153,10 @@ export class ChecklistComponent implements OnInit {
 
 
 
-=======
-      this.temp = Object.assign({}, this.newBag);
-      this.plainAdds2.push(this.temp);
->>>>>>> 76d089585b684cc7b49e1515d0565d5b6b3da399
+
+      // this.temp = Object.assign({}, this.newBag);
+      // this.plainAdds2.push(this.temp);
+
       // console.log('newBag before', this.newBag);
 
       // for (var i=0; i<this.plainAdds.length;i++){
