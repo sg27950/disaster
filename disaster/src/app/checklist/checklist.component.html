@@ -11,7 +11,13 @@
     <title>Checklist</title>
   </head>
   <body>
+      
     <div class="container">
+        
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+            Ma Bag
+          </button>
       <h2>Disaster Checklist</h2>
       <h3>Disaster</h3>
       <form class="form-horizontal" (submit)="sendWholeBag()">
@@ -97,6 +103,29 @@
       
       </form>
     </div>
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Ma Own Bag</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" *ngFor="let each of receivedBag.myBag; let i = index;">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{ each.item }}
+                  <span class="badge badge-primary badge-pill">{{ each.weight }}</span>
+                </li>
+              
+              </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -105,9 +134,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   
     <br>
-    <app-bag *ngIf="returnbag" [receivedBag]="returnbag"></app-bag>
+    
+    <!-- <app-bag *ngIf="returnbag" [receivedBag]="returnbag"></app-bag> -->
 
     {{returnbag | json}}
-  
+    
   </body>
 </html>
