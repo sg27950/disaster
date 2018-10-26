@@ -10,6 +10,7 @@
 
 # IDEs and editors
 /.idea
+.vagrant
 .project
 .classpath
 .c9/
@@ -37,3 +38,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+bootstrap.sh
+VagrantFile
+bower_components/
+package-lock.json

@@ -22,7 +22,7 @@ export class FireComponent implements OnInit {
 
   ngOnInit() {
     this.init();
-    this.video = 'BQ6pGvO4zuI'; // video id
+    this.video = 'g0fLu9wWbv4'; // video id
 
     window['onYouTubeIframeAPIReady'] = (e) => {
       this.YT = window['YT'];
@@ -32,6 +32,7 @@ export class FireComponent implements OnInit {
         events: {
           'onStateChange': this.onPlayerStateChange.bind(this),
           'onError': this.onPlayerError.bind(this),
+          // tslint:disable-next-line:no-shadowed-variable
           'onReady': (e) => {
             if (!this.reframed) {
               this.reframed = true;

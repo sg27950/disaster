@@ -56,8 +56,8 @@
             </div>
           </div>
         </div> -->
-        <!-- {{ testbag | json }} -->
-        {{ indexes | json }}
+
+        <!-- {{ indexes | json }} -->
         <div class="form-group">        
           <div class="col-sm-offset-2 col-sm-10 ">
             <button type="submit" class="btn btn-primary">Update Bag</button>
@@ -80,8 +80,8 @@
 
     </div>>
     <div class="container">
-      {{ newBag | json }}
-        <h2>Add new item</h2>
+      <!-- {{ newBag | json }} -->
+        <h2>Add Custom Options</h2>
       <form class="form-horizontal" (submit)="addBag()">
         <div class="form-group">
           <label class="control-label col-sm-2" for="name">Item Name:</label>
@@ -126,6 +126,36 @@
           </div>
         </div>
       </div>
+
+
+
+    <h2>Your Custom Checklist</h2>
+    <!-- {{plainAdds2 | json }} -->
+    <form class="form-horizontal" (submit)="sendCustom()">
+    <!-- <form class="form-horizontal" (submit)="testfunction()"> -->
+      <!-- forloop starts -->
+      <!-- <div *ngFor="let kek of kekBag.myBag; let i = index;trackBy:trackByIdx"> -->
+      <div *ngFor="let plain of plainAdds2; let i = index;">
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label><input type="checkbox" value="1" [(ngModel)]="indexes2[i]" [ngModelOptions]="{standalone: true}"> {{plain.item}} ({{plain.weight}} lbs)</label>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <!-- forloop ends -->
+
+      <!-- {{ indexes2 | json }} -->
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10 ">
+          <button type="submit" class="btn btn-primary">Update Bag</button>
+        </div>
+      </div>
+    </form>
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
