@@ -49,92 +49,92 @@ export class ChecklistComponent implements OnInit {
     "myBag": [
       {
         "item": "Cellphone and charger",
-        "weight": 1
+        "weight": 2
       },
       {
         "item": "Computer",
-        "weight": 5000
+        "weight": 7
       },
       {
         "item": "Driver's License",
-        "weight": 4000
+        "weight": 0
       },
       {
         "item": "Deed to your house",
-        "weight": 4000
+        "weight": 0
       },
       {
         "item": "Proof of Insurance",
-        "weight": 4000
+        "weight": 0
       },
       {
         "item": "Medical Records",
-        "weight": 4000
+        "weight": 0
       },
       {
         "item": "Passports",
-        "weight": 1
+        "weight": 0
       },
       {
         "item": "Social Security Cards",
-        "weight": 5000
+        "weight": 0
       },
       {
         "item": "A list of personal contacts",
-        "weight": 4000
+        "weight": 0
       },
       {
         "item": "Pet",
-        "weight": 4000
+        "weight": 25
       },
       {
         "item": "Cash",
-        "weight": 4000
+        "weight": 0
       },
       {
         "item": "Keys",
-        "weight": 4000
+        "weight": 0
       },
-      {
-        "item": "Original Paintings",
-        "weight": 4000
-      },
-      {
-        "item": "Non-perishable, ready-to-eat food",
-        "weight": 4000
-      },
-      {
-        "item": "Sanitary Devices",
-        "weight": 4000
-      },
-      {
-        "item": "Water",
-        "weight": 4000
-      },
-      {
-        "item": "Change of clothing",
-        "weight": 4000
-      },
-      {
-        "item": "Coats/Jackets",
-        "weight": 4000
-      },
-      {
-        "item": "Toiletries",
-        "weight": 4000
-      },
-      {
-        "item": "Flashlight",
-        "weight": 4000
-      },
-      {
-        "item": "Shoes/Boots",
-        "weight": 4000
-      },
-      {
-        "item": "Sleeping Bag",
-        "weight": 4000
-      },
+      // {
+      //   "item": "Original Paintings",
+      //   "weight": 200
+      // },
+      // {
+      //   "item": "Non-perishable, ready-to-eat food",
+      //   "weight": 50
+      // },
+      // {
+      //   "item": "Sanitary Devices",
+      //   "weight": 15
+      // },
+      // {
+      //   "item": "Water",
+      //   "weight": 10
+      // },
+      // {
+      //   "item": "Change of clothing",
+      //   "weight": 14
+      // },
+      // {
+      //   "item": "Coats/Jackets",
+      //   "weight": 10
+      // },
+      // {
+      //   "item": "Toiletries",
+      //   "weight": 5
+      // },
+      // {
+      //   "item": "Flashlight",
+      //   "weight": 2
+      // },
+      // {
+      //   "item": "Shoes/Boots",
+      //   "weight": 7
+      // },
+      // {
+      //   "item": "Sleeping Bag",
+      //   "weight": 5
+      // },
     ]
   };
     constructor(private _httpService: HttpService, private _router: Router) { }

@@ -99,46 +99,46 @@
     </div>
 
 
-
-    <h2>Your Custom Checklist</h2>
-    <!-- {{plainAdds2 | json }} -->
-    <form class="form-horizontal" (submit)="sendCustom()">
-    <!-- <form class="form-horizontal" (submit)="testfunction()"> -->
-      <!-- forloop starts -->
-      <!-- <div *ngFor="let kek of kekBag.myBag; let i = index;trackBy:trackByIdx"> -->
-      <div *ngFor="let plain of plainAdds2; let i = index;">
-        <div class="form-group">
-          <div class="col-sm-offset-2 col-sm-10">
-            <div class="checkbox">
-              <label><input type="checkbox" value="1" [(ngModel)]="indexes2[i]" [ngModelOptions]="{standalone: true}"> {{plain.item}} ({{plain.weight}} lbs)</label>
+    <div class="skootright">
+      <h2>Your Custom Checklist</h2>
+      <!-- {{plainAdds2 | json }} -->
+      <form class="form-horizontal" (submit)="sendCustom()">
+      <!-- <form class="form-horizontal" (submit)="testfunction()"> -->
+        <!-- forloop starts -->
+        <!-- <div *ngFor="let kek of kekBag.myBag; let i = index;trackBy:trackByIdx"> -->
+        <div *ngFor="let plain of plainAdds2; let i = index;">
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                <label><input type="checkbox" value="1" [(ngModel)]="indexes2[i]" [ngModelOptions]="{standalone: true}"> {{plain.item}} ({{plain.weight}} lbs)</label>
+              </div>
             </div>
           </div>
+        </div> 
+        <!-- forloop ends -->
+
+        <!-- {{ indexes2 | json }} -->
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10 ">
+            <button type="submit" class="btn btn-primary">Update Bag</button>
+          </div>
         </div>
-      </div> 
-      <!-- forloop ends -->
-
-      <!-- {{ indexes2 | json }} -->
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10 ">
-          <button type="submit" class="btn btn-primary">Update Bag</button>
-        </div>
-      </div>
-    </form>
+      </form>
 
 
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
-    <br>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+      <br>
 
-    <!-- <app-bag *ngIf="returnbag" [receivedBag]="returnbag"></app-bag> -->
-    <app-bag [receivedBag]="returnbag"></app-bag>
-    <!-- {{returnbag | json}} -->
-  
+      <!-- <app-bag *ngIf="returnbag" [receivedBag]="returnbag"></app-bag> -->
+      <app-bag [receivedBag]="returnbag"></app-bag>
+      <!-- {{returnbag | json}} -->
+    </div>
   </body>
 </html>
