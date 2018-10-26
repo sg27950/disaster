@@ -144,8 +144,14 @@ export class ChecklistComponent implements OnInit {
       // <--This is where the form data is picked up. MAKE SURE THEY MATCH YOUR MODELS!!!!-->
     }
     addBag() {
-      this.temp = Object.assign({},this.newBag);
-      this.plainAdds2.push(this.temp);
+      // this.temp = Object.assign({},this.newBag);
+      // this.plainAdds2.push(this.temp);
+
+      this.plainAdds2.push(Object.assign({},this.newBag));
+
+
+
+
       // console.log('newBag before', this.newBag);
 
       // for (var i=0; i<this.plainAdds.length;i++){
@@ -217,6 +223,17 @@ export class ChecklistComponent implements OnInit {
         }
       }
       this.sending();
+    }
+
+    deleteItem(id:any) {
+      console.log('id', id);
+      var observable = this._httpService.SerDelete(id);
+      observable.subscribe((data:any) => {
+        console.log('Deleted Product', data);
+        // if(!data.errors){
+        //   this._router.navigate(['/checklist']);
+        // }
+      })
     }
     // testfunction(){
     //   console.log('testbag:', this.testbag);
