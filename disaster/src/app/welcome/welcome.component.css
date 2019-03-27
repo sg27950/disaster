@@ -1,3 +1,205 @@
+/* for tiny mobile */
+.bg1 {
+  /* The image used */
+  background-image: url("../../assets/Hands_1521858Large_bw.jpg");
+  
+  /* Full height */
+  height: auto;
+  background-size: cover;
+}
+
+#logo1 {
+  height: 289px;
+  /* height: 504px; */
+}
+
+.startButton {
+  display: block;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-left: 70px;
+}
+
+.p1 {
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  display: inline-block;
+  border: 4px double rgba(255,255,255,.25);
+  border-width: 2px 0;
+  padding: 0.5em 0em;
+  top: 18%;
+  left: 50%;
+  width: 17em;
+}
+
+.span1 {
+
+    font: 700 3em/1 "Oswald", sans-serif;
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+/* Clip Background Image */
+
+    background: url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+/* Animate Background Image */
+
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 80s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+
+  }
+/* for tiny mobile */
+
+/* for iPhone 6/7/8 plus */
+/* Screen Sizes 414px and Up */
+@media(min-width: 414px) {
+  #logo1 {
+      margin-left: 3rem;
+  }
+  .startButton[_ngcontent-c1] {
+    display: block;
+    margin-left: 7.5rem;
+  }
+  p {
+    margin-left: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+/* for iPhone 6/7/8 plus */
+
+/* for tablets */
+/* Screen Sizes 768px and Up */
+@media(min-width: 768px) {
+  #logo1 {
+      margin-left: 24rem;
+      height: 25rem;
+  }
+  .startButton[_ngcontent-c1] {
+    display: block;
+    margin-left: 32rem;
+  }
+  p {
+    margin-left: 28rem;
+    margin-bottom: 17rem;
+  }
+}
+/* for tablets */
+
+/* for iPadPro */
+/* Screen Sizes 1024px and Up */
+@media(min-width: 1024px) {
+  #logo1 {
+      margin-left: 38rem;
+  }
+  .startButton[_ngcontent-c1] {
+    display: block;
+    margin-left: 45.5rem;
+  }
+  .p1 {
+    margin-left: 36rem;
+    margin-bottom: 44rem;
+    width: 27em;
+  }
+}
+/* for iPad Pro */
+
+/* for laptops */
+/* Screen Sizes 1024px and Up */
+@media(min-width: 1024px) {
+  #logo1 {
+      margin-left: 38rem;
+  }
+  .startButton[_ngcontent-c1] {
+    display: block;
+    margin-left: 45.5rem;
+  }
+  .p1 {
+    margin-left: 36rem;
+    margin-bottom: 44rem;
+    width: 27em;
+  }
+}
+/* for laptops */
+
+/* for large laptops */
+/* Screen Sizes 1440px and Up */
+@media(min-width: 1440px) {
+  #logo1 {
+      margin-left: 39rem;
+      height: 40rem;
+  }
+  .startButton[_ngcontent-c1] {
+    display: block;
+    margin-left: 45.5rem;
+    width: 11rem;
+  }
+  .p1 {
+    margin-left: 36rem;
+    margin-bottom: 22rem;
+    width: 31em;
+  }
+}
+/* for large laptops */
+
+/* for 4K Displays */
+/* Screen Sizes 1920px and Up */
+@media(min-width: 1920px) {
+  #logo1 {
+      margin-left: 39rem;
+      height: 40rem;
+  }
+  .startButton[_ngcontent-c1] {
+    display: block;
+    margin-left: 53.5rem;
+    width: 11rem;
+  }
+  .p1 {
+    margin-left: 36rem;
+    margin-bottom: 22rem;
+    width: 31em;
+  }
+}
+/* for 4K Displays */
+
+/* for Large 4K Displays */
+/* Screen Sizes 2560px and Up */
+@media(min-width: 2560px) {
+  #logo1 {
+      margin-left: 73rem;
+      height: 67rem;
+  }
+  .startButton[_ngcontent-c1] {
+    display: block;
+    margin-left: 52.5rem;
+    width: 22rem;
+    height: 5rem;
+  }
+  .p1 {
+    margin-left: 34rem;
+    margin-bottom: 52rem;
+    width: 31em;
+    font-size: 2rem;
+  }
+  .btn {
+    font-size: 2rem;
+  }
+  body {
+    font-size: 2rem;
+  }
+}
+/* for Large 4K Displays */
+
+  
 
 h1{
     color: #00B262;
@@ -15,15 +217,27 @@ h1{
     background-repeat: no-repeat;
     background-size: cover;
   }
-#logo {
-    height: 600px;
-    /* margin: auto; */
-}
+  /* @media screen and (max-width: 800px) {
+    .bg {
+      background-position: center;
+    }
+  } */
+  #logo {
+    height: 700px;
+    /* height: 504px; */
+  }
+  /* @media screen and (max-width: 320px) {
+  #logo {
+    height: 504px;
+    height: 200px;
+  }
+} */
 
 .center-block {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-left: 440px;
  }
  .ml13 {
     font-size: 1.9em;
@@ -49,9 +263,11 @@ p {
 	/* position: absolute;  */
 	top: 18%;
 	left: 50%;
-	width: 40em;
-	margin: 0 0 0 41em; 
-}  
+	width: 66em;
+	/* width: 40em; */
+  /* margin: 0 0 0 41em;  */
+  /* margin: 0 0 0 12em; */
+}
 span {
 
   	font: 700 4em/1 "Oswald", sans-serif;

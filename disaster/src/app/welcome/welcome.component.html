@@ -1,65 +1,78 @@
 
-  
-    <div class="bg">
+
+    <div class="bg1 col">
+      <div class="row">
+        <div class="col"><img  id="logo1" src="../../assets/logo-03.png" alt="logo"></div>
+      </div>
+      <div class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-3"><img class="rounded mx-auto d-block" id="logo" src="../../assets/logo-03.png" alt="logo"></div>
+          
+          <div class="col">
+            <button type="button" class="rounded mx-auto d-block" class="btn btn-outline-danger startButton" style="align-content: center"
+            [routerLink]="['/disaster/home']">GET STARTED</button>
+            <br>
+            <p class="p1" style="text-align: center">
+                Be prepared
+                <span class="span1" style="text-align: center">
+                    DISASTER WARNING
+                  </span>
+                  &mdash; Before, During and After &mdash;
+                </p>
+              </div>
             </div>
-            <div class="container" style="padding: 50px">
-                <div class="row">
-                    <div class="col-sm">
-                    </div>
-                    <div class="col-sm">
-                        <button type="button" class="rounded mx-auto d-block" class="btn btn-outline-danger center-block" style="align-content: center" [routerLink]="['/disaster/home']" >GET STARTED</button>
-                    </div>
-                    <div class="col-sm">
-                    </div>
-                </div>
-            </div>
-                
+          </div>
+          
+          <!-- Optional JavaScript -->
+          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+          <script>
+            $('.ml13').each(function () {
+              $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+            });
             
-            <div class="row" style="align-content: flex-start">
-                <p style="text-align: center"> 
-                    Be prepared
-                    <span style="text-align: center">
-                      DISASTER WARNING
-                    </span>
-                    &mdash; Before, During and After &mdash;
-                  </p>
-                  </div>
+            anime.timeline({
+              loop: true
+            })
+            .add({
+              targets: '.ml13 .letter',
+              translateY: [100, 0],
+              translateZ: 0,
+              opacity: [0, 1],
+              easing: "easeOutExpo",
+              duration: 14400,
+              delay: function (el, i) {
+                return 300 + 30 * i;
+              }
+            }).add({
+              targets: '.ml13 .letter',
+              translateY: [0, -100],
+              opacity: [1, 0],
+              easing: "easeInExpo",
+              duration: 1200,
+              delay: function (el, i) {
+                return 100 + 30 * i;
+              }
+            });
             
+            </script>
+
+<!-- Removed becuase not mobile first! <div class="bg">
+  <div class="row">
+    <div class="col-md-6 col-xl-12 offset-md-3 offset-xl-1"><img class="rounded mx-auto d-block" id="logo" src="../../assets/logo-03.png" alt="logo"></div>
+  </div>
+  <div class="container" style="padding: 50px">
+    <div class="row">
+      
+      <div class="col-sm-4 col-xl-12 offset-xl-3">
+        <button type="button" class="rounded mx-auto d-block" class="btn btn-outline-danger center-block" style="align-content: center"
+          [routerLink]="['/disaster/home']">GET STARTED</button>
+          <br>
+        <p style="text-align: center">
+          Be prepared
+          <span style="text-align: center">
+            DISASTER WARNING
+          </span>
+          &mdash; Before, During and After &mdash;
+        </p>
+      </div>
     </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
-  
-  <script>
-      $('.ml13').each(function(){
-$(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
-});
-
-anime.timeline({loop: true})
-.add({
-  targets: '.ml13 .letter',
-  translateY: [100,0],
-  translateZ: 0,
-  opacity: [0,1],
-  easing: "easeOutExpo",
-  duration: 14400,
-  delay: function(el, i) {
-    return 300 + 30 * i;
-  }
-}).add({
-  targets: '.ml13 .letter',
-  translateY: [0,-100],
-  opacity: [1,0],
-  easing: "easeInExpo",
-  duration: 1200,
-  delay: function(el, i) {
-    return 100 + 30 * i;
-  }
-});
-  
-  </script>
-
-
+  </div> -->

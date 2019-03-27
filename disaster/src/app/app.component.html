@@ -1,30 +1,32 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">Disaster</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarsExample07">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/disaster/checklist']">Checklist</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/disaster/bag']">My bag</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link" id="navbarDropdown1" data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Disaster Descriptions</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-              <li><a class="dropdown-item" [routerLink]="['/disaster/earthquake']" >Earthquake</a></li>
-              <li><a class="dropdown-item" [routerLink]="['/disaster/fire']">Fire</a></li>
-              <li><a class="dropdown-item" [routerLink]="['/disaster/flood']">Flood</a></li>
-              <li><a class="dropdown-item" [routerLink]="['/disaster/nuclear']">Nuclear</a></li>
-              <li><a class="dropdown-item" [routerLink]="['/disaster/tornado']">Tornado</a></li>
-            </ul>
+<div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Disaster</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExample07">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/disaster/checklist']">Checklist</a>
           </li>
-      </ul>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/disaster/bag']">My bag</a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link" id="navbarDropdown1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Disaster Descriptions</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                <li><a class="dropdown-item" [routerLink]="['/disaster/earthquake']" >Earthquake</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/disaster/fire']">Fire</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/disaster/flood']">Flood</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/disaster/nuclear']">Nuclear</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/disaster/tornado']">Tornado</a></li>
+              </ul>
+            </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
+</div>
 <router-outlet></router-outlet>
