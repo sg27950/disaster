@@ -56,8 +56,3 @@ ul, li{
 .max-width-1024{
     max-width: 1024px; margin: 0 auto;
 }
-a {
-    background-color: #bcf7ab;
-    color: #1a6069;
-    font-size: 24px;
-}

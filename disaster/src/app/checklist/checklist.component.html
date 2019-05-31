@@ -1,116 +1,145 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-
-  <title>Checklist</title>
-</head>
-
-<body>
-  <div class="container">
-    <h2>Disaster Checklist</h2>
-    <h3>Disaster</h3>
-    <form class="form-horizontal" (submit)="sendWholeBag()">
+    <title>Checklist</title>
+  </head>
+  <body>
+      
+    <div class="container">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Ma Bag</button>
+      <h2>Disaster Checklist</h2>
+      <h3>Disaster</h3>
+      <form class="form-horizontal" (submit)="sendWholeBag()">
       <!-- <form class="form-horizontal" (submit)="testfunction()"> -->
-      <!-- forloop starts -->
-      <!-- <div *ngFor="let kek of kekBag.myBag; let i = index;trackBy:trackByIdx"> -->
-      <div *ngFor="let kek of kekBag.myBag; let i = index;">
-        <div class="form-group">
+        <!-- forloop starts -->
+        <!-- <div *ngFor="let kek of kekBag.myBag; let i = index;trackBy:trackByIdx"> -->
+        <div *ngFor="let kek of kekBag.myBag; let i = index;">
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                <!-- <label><input type="checkbox" value="kekBag.myBag[i]" [(ngModel)]="testbag.myBag[i]" [ngModelOptions]="{standalone: true}"> {{kek.item}} ({{kek.weight}} lbs)</label> -->
+                <label><input type="checkbox" value="1" [(ngModel)]="indexes[i]" [ngModelOptions]="{standalone: true}"> {{kek.item}} ({{kek.weight}} lbs)</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- forloop ends -->
+        <!-- <div class="form-group">        
           <div class="col-sm-offset-2 col-sm-10">
             <div class="checkbox">
-              <!-- <label><input type="checkbox" value="kekBag.myBag[i]" [(ngModel)]="testbag.myBag[i]" [ngModelOptions]="{standalone: true}"> {{kek.item}} ({{kek.weight}} lbs)</label> -->
-              <label><input type="checkbox" value="1" [(ngModel)]="indexes[i]" [ngModelOptions]="{standalone: true}">
-                {{kek.item}} ({{kek.weight}} lbs)</label>
+              <label><input type="checkbox" name="remember">Item 2</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">        
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label><input type="checkbox" name="remember">Item 3</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">        
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label><input type="checkbox" name="remember">Item 4</label>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- {{ indexes | json }} -->
+        <div class="form-group">        
+          <div class="col-sm-offset-2 col-sm-10 ">
+            <button type="submit" class="btn btn-primary">Update Bag</button>
+          </div>
+        </div>
+      </form>
+
+
+      <!-- 
+        <form (submit) = "updateRestaurant()">
+          <p>Restaurant Name: <input type="text" name="name" [(ngModel)]="restaurant.name"></p>
+          <p *ngIf="restaurant.name.length < 4">Restaurant name must be at least 3 characters long</p>
+          <p>Cuisine: <input type="text" name="cuisine" [(ngModel)]="restaurant.cuisine"></p>
+          <p *ngIf="restaurant.cuisine.length < 4">Cuisine must be at least 3 characters long</p>
+          <a [routerLink]="['/restaurants']">Cancel </a>
+          <input type="submit" >
+        </form> -->
+
+
+
+    </div>
+    <div class="container">
+      <!-- {{ newBag | json }} -->
+        <h2>Add Custom Options</h2>
+      <form class="form-horizontal" (submit)="addBag()">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="name">Item Name:</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" name="newBag.item"  [(ngModel)]="newBag.item" placeholder="Enter item">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="weight">Weight:</label>
+          <div class="col-sm-5">
+            <input type="number" class="form-control" name="newBag.weight" [(ngModel)]="newBag.weight" placeholder="Enter weight">
+          </div>
+        </div>
+        <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10 ">
+              <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+          </div>
+      
+      </form>
+    </div>
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Ma Own Bag</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" *ngFor="let each of receivedBag.myBag; let i = index;">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{ each.item }}
+                  <span class="badge badge-primary badge-pill">{{ each.weight }}</span>
+                </li>
+              
+              </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- {{ indexes | json }} -->
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10 ">
-          <button type="submit" class="btn btn-primary">Update Bag</button>
-        </div>
-      </div>
-    </form>
 
 
-
-  </div>
-  <div class="container">
-    <!-- {{ newBag | json }} -->
-    <h2>Add Custom Options</h2>
-    <form class="form-horizontal" (submit)="addBag()">
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="name">Item Name:</label>
-        <div class="col-sm-5">
-          <input 
-            type="text" 
-            class="form-control" 
-            name="newBag.item" 
-            required 
-            minlength="2" 
-            [(ngModel)]="newBag.item"
-            #item="ngModel"
-            placeholder="Enter item"
-          >
-          <div class="errors" *ngIf="!item.valid" >Minimum length 2</div>
-          <!-- {{ item.errors | json }} validation check-->
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="weight">Weight:</label>
-        <div class="col-sm-5">
-          <input
-            type="number"
-            class="form-control"
-            name="newBag.weight"
-            required
-            min=".5"
-            max="50"
-            step=".5"
-            [(ngModel)]="newBag.weight"
-            #weight="ngModel"
-            placeholder="Enter weight"
-          >
-          <div class="errors" *ngIf="!weight.valid">Minimum weight .5</div>
-        </div>
-
-      </div>
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10 ">
-          <button *ngIf="item.valid" type="submit" class="btn btn-primary">Add</button>
-        </div>
-      </div>
-      
-    </form>
-  </div>
-
-
-  <div class="container">
     <h2>Your Custom Checklist</h2>
     <!-- {{plainAdds2 | json }} -->
     <form class="form-horizontal" (submit)="sendCustom()">
-      <!-- <form class="form-horizontal" (submit)="testfunction()"> -->
+    <!-- <form class="form-horizontal" (submit)="testfunction()"> -->
       <!-- forloop starts -->
       <!-- <div *ngFor="let kek of kekBag.myBag; let i = index;trackBy:trackByIdx"> -->
       <div *ngFor="let plain of plainAdds2; let i = index;">
         <div class="form-group">
           <div class="col-sm-offset-2 col-sm-10">
             <div class="checkbox">
-              <label><input type="checkbox" value="1" [(ngModel)]="indexes2[i]" [ngModelOptions]="{standalone: true}">
-                {{plain.item}} ({{plain.weight}} lbs)</label>
+              <label><input type="checkbox" value="1" [(ngModel)]="indexes2[i]" [ngModelOptions]="{standalone: true}"> {{plain.item}} ({{plain.weight}} lbs)</label>
             </div>
           </div>
         </div>
-      </div>
+      </div> 
       <!-- forloop ends -->
 
       <!-- {{ indexes2 | json }} -->
@@ -120,20 +149,21 @@
         </div>
       </div>
     </form>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
     <br>
     
     <!-- <app-bag *ngIf="returnbag" [receivedBag]="returnbag"></app-bag> -->
-    <app-bag [receivedBag]="returnbag"></app-bag>
-    <!-- {{returnbag | json}} -->
-  </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
-</body>
 
+    <!-- {{returnbag | json}} -->
+    
+  </body>
 </html>

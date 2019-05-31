@@ -41,21 +41,6 @@ export class BagComponent implements OnInit {
       // }
     })
   }
-
-  deleteItem(id:any) {
-    console.log('id', id);
-    // this._httpService.SerDelete(id);
-    // console.log('bags delete');
-
-    var observable = this._httpService.SerDelete(id);
-    observable.subscribe((data:any) => {
-      console.log(data);
-      this.readBag();
-      // if(!data.errors){
-      //   this._router.navigate(['/checklist']);
-      // }
-    })
-  }
   // readBag(){
 
   // }
