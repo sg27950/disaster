@@ -1,0 +1,14 @@
+how to get the project on an AWS EC2 server:
+
+type nul > .gitignore
+
+//copy paste the following inside:
+
+.DS_Store
+.idea
+.vagrant
+bootstrap.sh
+VagrantFile
+bower_components/
+node_modules
+package-lock.json
